@@ -1,0 +1,125 @@
+# trime.custom.yaml
+colors:
+  1:  &color_black        "#333842"  # "#282C34"
+  2:  &color_red          "#e9969d"  # "#E06C75"
+  3:  &color_green        "#98C379"
+  4:  &color_yellow       "#E5C07B"
+  5:  &color_blue         "#61AFEF"  # unused
+  6:  &color_megenta      "#C678DD"  # unused
+  7:  &color_cyan         "#56B6C2"
+  8:  &color_white        "#eeeff2"  # "#ABB2BF"
+  9:  &color_black_l      "#49515f"  # lighter than black
+  10: &color_black_d      "#282C34"  # "#070709"  # dark than black
+
+patch:
+  "style/enter_labels":
+    default: '⏎'
+    done: 完成
+    go: 前往
+    next: 下個
+    pre:  上個
+    search: 搜尋
+    send: 發送
+
+  "preset_color_schemes/one_dark":
+    name: One Dark
+    author: Paul, based on one dark
+    text_color: *color_white
+    back_color: *color_black
+    keyboard_background: *color_black_d
+    border_color: *color_white
+
+    key_text_color: *color_white
+    off_key_text_color: *color_green
+    key_symbol_color: *color_red
+
+    candidate_text_color: *color_yellow
+    candidate_separator_color: *color_yellow
+
+    hilited_candidate_text_color: *color_cyan
+    hilited_candidate_back_color: *color_black_l
+
+  # Default keys
+  "preset_keys/BackSpace": {label: '⌫', repeatable: true, send: BackSpace}
+  "preset_keys/space": {label: '␣', repeatable: false, send: space}
+  "preset_keys/Left": {label: '◀', send: Left}
+  "preset_keys/Down": {label: '▼', send: Down}
+  "preset_keys/Up": {label: '▲', send: Up}
+  "preset_keys/Right": {label: '▶', send: Right}
+
+  # Extra keys
+  "preset_keys/Delimiter": {label: "分詞", text: ''''}
+  # rime/librime/data/minimal/default.yaml
+  # - { when: composing, accept: Tab, send: Shift+Right }
+  "preset_keys/Tab": {label: "字詞", send: Tab}
+  # For readability
+  "preset_keys/GraveAccent": {label: '𝀅', send: '`'}
+  "preset_keys/Comma": {label: '𝀍', send: '<'}
+  "preset_keys/FullStop": {label: '○' , send: '>'}
+
+  # 建立bopomofo_tw的鍵盤佈局
+  "preset_keyboards/bopomofo_tw":
+    ascii_keyboard: letter
+    author: "qrspncpr"
+    name: "注音鍵盤"
+    ascii_mode: 0
+    height: 44
+    width: 10
+    keys: 
+      - {click: 1, label: "ㄅ", long_click: "!"}
+      - {click: 2, label: "ㄉ", long_click: "@"}
+      - {click: 3, label: "ˇ", long_click: "#"}
+      - {click: 4, label: "ˋ", long_click: "$"}
+      - {click: 5, label: "ㄓ", long_click: "%"}
+      - {click: 6, label: "ˊ", long_click: "^"}
+      - {click: 7, label: "˙", long_click: "&"}
+      - {click: 8, label: "ㄚ", long_click: "*"}
+      - {click: 9, label: "ㄞ", long_click: "("}
+      - {click: 0, label: "ㄢ", long_click: ")"}
+      - {click: q, label: "ㄆ", long_click: _}
+      - {click: w, label: "ㄊ", long_click: "-"}
+      - {click: e, label: "ㄍ", long_click: "+"}
+      - {click: r, label: "ㄐ", long_click: "="}
+      - {click: t, label: "ㄔ", long_click: "|"}
+      - {click: y, label: "ㄗ", long_click: "\\"}
+      - {click: u, label: "ㄧ", long_click: "["}
+      - {click: i, label: "ㄛ", long_click: "]"}
+      - {click: o, label: "ㄟ", long_click: "{"}
+      - {click: p, label: "ㄣ", long_click: "}"}
+      - {click: a, label: "ㄇ", long_click: GraveAccent}
+      - {click: s, label: "ㄋ", long_click: Up}
+      - {click: d, label: "ㄎ", long_click: "~"}
+      - {click: f, label: "ㄑ", long_click: "!"}
+      - {click: g, label: "ㄕ", long_click: select_all}
+      - {click: h, label: "ㄘ", long_click: Home}
+      - {click: j, label: "ㄨ", long_click: End}
+      - {click: k, label: "ㄜ", long_click: Page_Up}
+      - {click: l, label: "ㄠ", long_click: Page_Down}
+      - {click: ";", label: "ㄤ", long_click: ":"}
+      - {click: z, label: "ㄈ", long_click: Left}
+      - {click: x, label: "ㄌ", long_click: Down}
+      - {click: c, label: "ㄏ", long_click: Right}
+      - {click: v, label: "ㄒ", long_click: cut}
+      - {click: b, label: "ㄖ", long_click: copy}
+      - {click: n, label: "ㄙ", long_click: paste}
+      - {click: m, label: "ㄩ", long_click: Insert}
+      - {click: ",", label: "ㄝ", long_click: Comma}
+      - {click: ., label: "ㄡ", long_click: FullStop}
+      - {click: "/", label: "ㄥ", long_click: "?"}
+      - {click: Keyboard_symbols, long_click: Keyboard_number}
+      - {click: Shift_L, send_bindings: false, composing: Tab, long_click: Shift_L}
+      - {click: Mode_switch, composing: Delimiter, long_click: Menu}
+      - {click: space, long_click: VOICE_ASSIST, width: 30}
+      - {click: "-", label: "ㄦ", long_click: "\""}
+      - {click: BackSpace, label_symbol: "▲刪詞",  swipe_up: DeleteCandidate, width: 10}
+      - {click: Return, composing: Return1, long_click: CommitScriptText, width: 20}
+
+  # Bug: 如果關閉鍵盤再打開後，鍵盤配置會出錯變成預設，所以把預設改成跟bopomofo一樣
+  "preset_keyboards/qwerty":
+    ascii_keyboard: letter
+    ascii_mode: 0
+    author: "皛筱晓小笨鱼"
+    height: 44
+    keys: [{click: 1, label: "ㄅ", long_click: "!"}, {click: 2, label: "ㄉ", long_click: "@"}, {click: 3, label: "ˇ", long_click: "#"}, {click: 4, label: "ˋ", long_click: "$"}, {click: 5, label: "ㄓ", long_click: "%"}, {click: 6, label: "ˊ", long_click: "^"}, {click: 7, label: "˙", long_click: "&"}, {click: 8, label: "ㄚ", long_click: "*"}, {click: 9, label: "ㄞ", long_click: "("}, {click: 0, label: "ㄢ", long_click: ")"}, {click: q, label: "ㄆ", long_click: _}, {click: w, label: "ㄊ", long_click: "-"}, {click: e, label: "ㄍ", long_click: "+"}, {click: r, label: "ㄐ", long_click: "="}, {click: t, label: "ㄔ", long_click: "|"}, {click: y, label: "ㄗ", long_click: "\\"}, {click: u, label: "ㄧ", long_click: "["}, {click: i, label: "ㄛ", long_click: "]"}, {click: o, label: "ㄟ", long_click: "{"}, {click: p, label: "ㄣ", long_click: "}"}, {click: a, label: "ㄇ", long_click: "`"}, {click: s, label: "ㄋ", long_click: Up}, {click: d, label: "ㄎ", long_click: "~"}, {click: f, label: "ㄑ", long_click: "!"}, {click: g, label: "ㄕ", long_click: select_all}, {click: h, label: "ㄘ", long_click: Home}, {click: j, label: "ㄨ", long_click: End}, {click: k, label: "ㄜ", long_click: Page_Up}, {click: l, label: "ㄠ", long_click: Page_Down}, {click: ";", label: "ㄤ", long_click: ":"}, {click: z, label: "ㄈ", long_click: Left}, {click: x, label: "ㄌ", long_click: Down}, {click: c, label: "ㄏ", long_click: Right}, {click: v, label: "ㄒ", long_click: cut}, {click: b, label: "ㄖ", long_click: copy}, {click: n, label: "ㄙ", long_click: paste}, {click: m, label: "ㄩ", long_click: Insert}, {click: ",", label: "ㄝ", long_click: "<"}, {click: ., label: "ㄡ", long_click: ">"}, {click: "/", label: "ㄥ", long_click: "?"}, {click: Shift_L, label: "換檔", send_bindings: false}, {click: Mode_switch, long_click: Menu}, {click: Keyboard_symbols, long_click: Keyboard_number}, {click: space, long_click: VOICE_ASSIST, width: 30}, {click: "-", label: "ㄦ", long_click: "\""}, {click: "，", long_click: "。"}, {click: BackSpace, long_click: Escape, width: 10}, {click: Return, composing: Return1, long_click: CommitComment, width: 10}]
+    name: "註音鍵盤"
+    width: 10

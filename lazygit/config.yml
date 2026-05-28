@@ -1,0 +1,10 @@
+gui:
+  scrollHeight: 10 # how many lines you scroll by
+  theme:
+    selectedLineBgColor:
+      - '#174525'
+git:
+  pagers:
+    - colorarg: always
+      pager: delta --dark --paging=never
+      autoRefresh: false

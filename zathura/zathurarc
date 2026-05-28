@@ -1,0 +1,15 @@
+set recolor-lightcolor "#282C34"
+set recolor-darkcolor "#98C379"
+set default-bg "#282C34"
+set font "monospace normal 13"
+set guioptions ""
+set selection-clipboard "clipboard"
+set first-page-column 1
+
+map [normal] d scroll half-down
+map [fullscreen] d scroll half-down
+map [normal] e scroll half-up
+map [fullscreen] e scroll half-up
+
+map [normal] <C-d> toggle_page_mode
+map [fullscreen] <C-d> toggle_page_mode

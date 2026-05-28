@@ -1,0 +1,12 @@
+[global]
+disable = [ "MD013", "MD047"]
+
+[MD004]
+style = "dash"
+
+[MD007]
+indent = 4
+style = "fixed"
+
+[MD024]
+allow-different-nesting = true

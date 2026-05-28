@@ -1,0 +1,75 @@
+---
+- defaults:
+    link:
+      create: true
+
+- clean: ['~']
+
+- shell:
+    - [git submodule update --init --recursive, Installing submodules]
+    # - test -f .bashrc && mv ~/.bashrc ~/.bashrc.bk
+    # - test -f .profile && mv ~/.profile ~/.profile.bk
+    # - test -f .zshenv && mv ~/.zshenv ~/.zshenv.bk
+    - test -f .bashrc  && test ! -f ~/.bashrc.bk  && mv ~/.bashrc  ~/.bashrc.bk  || true
+    - test -f .profile && test ! -f ~/.profile.bk && mv ~/.profile ~/.profile.bk || true
+    - test -f .zshenv  && test ! -f ~/.zshenv.bk  && mv ~/.zshenv  ~/.zshenv.bk  || true
+
+- link:
+    ~/.bashrc: .bashrc
+    ~/.bash_aliases: .bash_aliases
+
+    ~/.profile: .profile
+
+    ~/.zshenv: .zshenv
+    ~/.config/zsh/.zshrc: zsh/.zshrc
+    ~/.config/zsh/.zprofile: zsh/.zprofile
+    ~/.config/zsh/.p10k.zsh: zsh/.p10k.zsh
+    ~/.config/zsh/plugins: zsh/plugins
+
+    ~/.config/awesome: awesome
+    ~/.local/bin/notify: awesome/notify
+
+    ~/.config/coc/mysnippets: coc/mysnippets
+    ~/.config/fsh: fsh
+
+    ~/.local/share/fcitx5/themes: fcitx5/themes
+
+    ~/.config/mozc/ibus_config.textproto: config/mozc/ibus_config.textproto
+    ~/.config/ibus/rime:
+      glob: true
+      path: rime/*
+
+    ~/.config/mpv: mpv
+
+        #~/.config/nvim/init.vim: nvim/init.vim
+        #~/.config/nvim/setting: nvim/setting
+        #~/.config/nvim/coc-settings.json: nvim/coc-settings.json
+        #~/.config/nvim/ftplugin: ./nvim/ftplugin
+    ~/.config/nvim: nvim
+
+    ~/.config/ripgrep.conf: config/ripgrep.conf
+    ~/.config/alacritty/alacritty.yml: config/alacritty.yml
+    ~/.virtualenvs/postmkvirtualenv: virtualenvs/postmkvirtualenv
+
+    ~/.config/zathura/zathurarc: zathura/zathurarc
+
+    ~/.config/bat/config: bat/config
+
+    ~/.config/lazygit/config.yml: lazygit/config.yml
+
+    # TODO:
+    # ~/.config/fontconfig/fonts.conf: config/fontconfig/fonts.conf
+
+    ~/.config/kitty/kitty.conf: config/kitty/kitty.conf
+    ~/.config/kitty/current-theme.conf: config/kitty/current-theme.conf
+
+    ~/.config/btop/btop.conf: config/btop/btop.conf
+
+    ~/.config/clifm/colors/one-dark.clifm: config/clifm/colors/one-dark.clifm
+    ~/.config/clifm/plugins/z.sh: config/clifm/plugins/z.sh
+    ~/.config/clifm/profiles/default/actions.clifm: config/clifm/profiles/default/actions.clifm
+    ~/.config/clifm/profiles/default/clifmrc: config/clifm/profiles/default/clifmrc
+
+    ~/.config/yamllint/config: config/yamllint/config
+
+    ~/.config/moxide/settings.toml: config/moxide/settings.toml
