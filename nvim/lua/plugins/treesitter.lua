@@ -31,8 +31,10 @@ return {
   },
   {
     "MeanderingProgrammer/treesitter-modules.nvim",
-    event = { "BufReadPost", "VeryLazy" },
     dependencies = { "nvim-treesitter/nvim-treesitter" },
+    init = function ()
+      vim.env.CC = 'gcc'
+    end,
     opts = {
       ensure_installed = languages,
       fold = { enable = true },

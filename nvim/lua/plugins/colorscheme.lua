@@ -52,6 +52,13 @@ local colorscheme = {
       vim.api.nvim_set_hl(0, 'TSStrong', { link = 'orange' })
     end
   },
+  {
+    "marekh19/meowsoot.nvim",
+    cond = false,
+    config = function()
+      vim.cmd.colorscheme("meowsoot")
+    end,
+  }
 }
 
 math.randomseed(vim.loop.now())
