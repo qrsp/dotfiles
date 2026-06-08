@@ -5,9 +5,10 @@ return {
     event = "VeryLazy",
     config = function()
       require('imselect').setup({
-        insert_engines = { 134481924 },
+        insert_engines = { 67372036 },
         normal_engines = { 67699721 },
       })
+      vim.g.input_method = require('imselect')
     end,
   },
   {
@@ -20,6 +21,16 @@ return {
         normal_engines = { 'xkb:us::eng' },
         no_mappings = false
       })
+      vim.g.input_method = require('ibus')
     end
+  },
+  {
+    "kkew3/jieba.vim",
+    tag = "v2.1.1",
+    build = ":call jieba_vim#install()",
+    init = function()
+      vim.g.jieba_vim_lazy = 1
+      vim.g.jieba_vim_keymap = 1
+    end,
   },
 }

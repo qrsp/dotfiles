@@ -57,7 +57,23 @@ return {
     event = "VeryLazy",
     opts = {},
     keys = {
-      { "s",     mode = { "n", "x", "o" }, function() require("flash").jump() end,              desc = "Flash" },
+      {
+        "s",
+        mode = { "n", "x", "o" },
+        function()
+          local input_method = vim.g.input_method
+          local flash = require("flash")
+          if input_method.is_enabled() then
+            input_method.insert_mode()
+            flash.jump({})
+            input_method.normal_mode()
+          else
+            flash.jump({})
+          end
+        end,
+        desc = "Flash"
+      },
+
       { "S",     mode = { "n", "x", "o" }, function() require("flash").treesitter() end,        desc = "Flash Treesitter" },
       { "r",     mode = "o",               function() require("flash").remote() end,            desc = "Remote Flash" },
       { "R",     mode = { "o", "x" },      function() require("flash").treesitter_search() end, desc = "Treesitter Search" },
