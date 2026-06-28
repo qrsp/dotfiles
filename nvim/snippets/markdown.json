@@ -1,0 +1,8 @@
+{
+  "Insert bold text without trailing space": {
+    "prefix": ["bb"],
+    "body": "**${1}**$0",
+    "description": "Insert bold text without trailing space"
+  }
+}
+
