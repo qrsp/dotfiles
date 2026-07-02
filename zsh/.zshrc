@@ -341,3 +341,87 @@ extract() {
 		fi
 	done
 }
+
+screenshot() {
+    local SAVE_DIR="$HOME/Pictures/Screenshots"
+    mkdir -p "$SAVE_DIR"
+
+    # Open the oldest file
+    if [[ "$1" == "-o" || "$1" == "--open" ]]; then
+        # Find the oldest .png file in the directory
+        local OLDEST_FILE=$(find "$SAVE_DIR" -maxdepth 1 -name "*.png" -type f -printf '%T+ %p\n' 2>/dev/null | sort | head -n 1 | cut -d' ' -f2-)
+
+        if [[ -n "$OLDEST_FILE" && -f "$OLDEST_FILE" ]]; then
+            echo "Opening oldest screenshot: $OLDEST_FILE"
+            xdg-open "$OLDEST_FILE" # Uses your system's default image viewer
+        else
+            echo "No screenshots found in $SAVE_DIR"
+        fi
+        return 0
+    fi
+
+    # Delete all PNG files
+    if [[ "$1" == "-d" || "$1" == "--delete" ]]; then
+        # Count PNG files first
+        local FILE_COUNT=$(find "$SAVE_DIR" -maxdepth 1 -name "*.png" -type f | wc -l)
+
+        if [ "$FILE_COUNT" -gt 0 ]; then
+            rm -f "$SAVE_DIR"/*.png
+            echo "Deleted $FILE_COUNT screenshot(s) from $SAVE_DIR"
+        else
+            echo "No PNG files found to delete in $SAVE_DIR"
+        fi
+        return 0
+    fi
+
+    # Infinite loop taking screenshots
+    echo "Starting automated screenshot capture... (Press Ctrl+C to stop)"
+    while true; do
+        local TIMESTAMP=$(date +"%Y-%m-%d_%H-%M-%S")
+        local FILE_PATH="$SAVE_DIR/screenshot_$TIMESTAMP.png"
+
+        flameshot full -r > "$FILE_PATH"
+        echo "Screenshot saved: $FILE_PATH"
+
+        sleep 2
+    done
+}
+
+set_default_app() {
+    # 1. Select a file in the current directory (including hidden files, excluding . and ..)
+    local file
+    file=$(find . -maxdepth 1 -type f -not -name '.*' -o -name '.*' | sed 's|^\./||' | fzf --header="Select a file to configure:")
+
+    [ -z "$file" ] && echo "No file selected. Exiting." && return 1
+
+    # Get the MIME type of the selected file
+    local mime_type
+    mime_type=$(xdg-mime query filetype "$file")
+    echo "Selected file: $file (MIME type: $mime_type)"
+
+    # 2. Select an installed application desktop file
+    local desktop_file
+    desktop_file=$(query_desktop_files | fzf --header="Select default application for $mime_type:")
+
+    [ -z "$desktop_file" ] && echo "No application selected. Exiting." && return 1
+
+    # 3. Set the default application using xdg-mime
+    echo "Setting $desktop_file as default for $mime_type..."
+    xdg-mime default "$desktop_file" "$mime_type"
+
+    # Verification
+    local new_default
+    new_default=$(xdg-mime query default "$mime_type")
+    echo "Success! New default for $mime_type is: $new_default"
+}
+
+# Helper function to find and clean up desktop file names
+query_desktop_files() {
+    # Common directories where .desktop files are stored
+    local dirs=("/usr/share/applications" "$HOME/.local/share/applications")
+    for dir in "${dirs[@]}"; do
+        if [ -d "$dir" ]; then
+            find "$dir" -name "*.desktop" -exec basename {} \;
+        fi
+    done | sort -u
+}
