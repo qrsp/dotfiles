@@ -47,30 +47,4 @@ return {
       { "<leader>/",       function() require("fzf-lua").grep() end,    desc = "FzfLua Grep" },
     },
   },
-  {
-    "gennaro-tedesco/nvim-possession",
-    dependencies = {
-      "ibhagwan/fzf-lua",
-    },
-    config = function()
-      require("nvim-possession").setup({
-        autoswitch = {
-          enable = true,
-        },
-        fzf_winopts = {
-          height = 0.7,
-          width = 0.5,
-          preview = {
-            vertical = "down:50%"
-          }
-        },
-      })
-    end,
-    keys = {
-      { "<leader>sl", function() require("nvim-possession").list() end, desc = "📌list sessions", },
-      { "<leader>sn", function() require("nvim-possession").new() end, desc = "📌create new session", },
-      { "<leader>su", function() require("nvim-possession").update() end, desc = "📌update current session", },
-      { "<leader>sd", function() require("nvim-possession").delete() end, desc = "📌delete selected session" },
-    },
-  },
 }
