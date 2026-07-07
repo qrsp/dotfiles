@@ -8,6 +8,10 @@ return {
     },
     config = function()
       require('render-markdown').setup({
+        -- for markdown-pipetable.nvim
+        pipe_table = { enabled = false },
+        win_options = { concealcursor = { rendered = 'nvic' } },
+
         bullet = {
           ordered_icons = nil
         },
@@ -29,5 +33,12 @@ return {
         },
       })
     end
+  },
+  {
+    'dominic-righthere/markdown-pipetable.nvim',
+    ft = 'markdown',
+    config = function()
+      require('pipetable').setup({})
+    end,
   },
 }

@@ -81,20 +81,6 @@ return {
     },
   },
   {
-    'nvim-mini/mini.align',
-    event = "VeryLazy",
-    version = '*',
-    config = function()
-      require('mini.align').setup({
-        options = {
-          split_pattern = '|',
-          justify_side = 'center',
-          merge_delimiter = '',
-        },
-      })
-    end
-  },
-  {
     "gennaro-tedesco/nvim-jqx",
     cmd = "JqxList",
     ft = { "json", "yaml" },
