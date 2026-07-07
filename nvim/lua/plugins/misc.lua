@@ -81,11 +81,6 @@ return {
     },
   },
   {
-    "gennaro-tedesco/nvim-jqx",
-    cmd = "JqxList",
-    ft = { "json", "yaml" },
-  },
-  {
     "nvim-mini/mini.trailspace",
     cmd = "Trailspace",
     version = "*",
