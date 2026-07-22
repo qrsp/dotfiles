@@ -131,4 +131,9 @@ return {
       })
     end
   },
+  {
+    "ntk148v/yankdown.nvim",
+    event = "VeryLazy",
+    opts = {},
+  },
 }

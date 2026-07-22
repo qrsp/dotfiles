@@ -58,7 +58,18 @@ local colorscheme = {
     config = function()
       vim.cmd.colorscheme("meowsoot")
     end,
-  }
+  },
+  {
+    "Aejkatappaja/sora",
+    cond = false,
+    lazy = false,
+    priority = 1000,
+    opts = {},
+    config = function(_, opts)
+      require("sora").setup(opts)
+      vim.cmd("colorscheme sora")
+    end,
+  },
 }
 
 math.randomseed(vim.loop.now())
