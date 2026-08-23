@@ -32,10 +32,13 @@ vim.api.nvim_create_autocmd("LspAttach", {
     end, {})
 
     -- inlay-hints: https://github.com/MysticalDevil/inlay-hints.nvim
-    local client = vim.lsp.get_client_by_id(ev.data.client_id)
-    if client:supports_method("textDocument/inlayHint") or client.server_capabilities.inlayHintProvider then
-      vim.lsp.inlay_hint.enable(true, { bufnr = ev.buf })
-    end
+    vim.api.nvim_create_user_command("InlayHintsToggle", function()
+      vim.lsp.inlay_hint.enable(
+        not vim.lsp.inlay_hint.is_enabled({ bufnr = 0 }),
+        { bufnr = 0 }
+      )
+    end, {})
+
   end,
 })
 
@@ -92,6 +95,7 @@ return {
 
       vim.lsp.enable({"mpls"})
 
+      vim.lsp.inlay_hint.enable(false)
     end,
   },
   {
