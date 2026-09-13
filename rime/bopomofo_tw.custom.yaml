@@ -1,0 +1,40 @@
+
+patch:
+  "style/font_point": 12
+
+  # 用 ctrl + [0-9] 選字
+  menu/alternative_select_keys: ""
+
+  # reverse_lookup 可以認得的輸入
+  recognizer/patterns/reverse_lookup: "`[a-z0-9]*$"
+  schema/dependencies:
+    - emoji_jp
+  reverse_lookup:
+    dictionary: emoji_jp
+    # 提前顯示尚未輸入完整碼的字
+    enable_completion: true
+    prefix: "`"
+    tips: 〔表情〕
+
+  simplifier:
+    # 提示轉換前的字
+    tips: all
+
+  "translator/dictionary": bopomo_onion.extended
+  "translator/prism": bopomo_onion
+
+  "punctuator/half_shape/?": [ "?",？, "/", ／, ÷ ]
+  "punctuator/half_shape/:": [ ":", ：, ； ]
+  "punctuator/half_shape/'": { commit: "'" }
+  "punctuator/half_shape/\"": { commit: "\"" }
+  "punctuator/half_shape/|": [ "|", ·, ｜, "§", "¦" ]
+  "punctuator/half_shape/!": [ "!", ！ ]
+  "punctuator/half_shape/$": [ "$", ￥, "€", "£", "¥", "¢", "¤" ]
+  "punctuator/half_shape/^" : [ ^, …… ]
+  "punctuator/half_shape/(" : [ (, （ ]
+  "punctuator/half_shape/)" : [ ), ） ]
+  "punctuator/half_shape/_" : [ _, "-",  ——, － ]
+  "punctuator/half_shape/[" : [ "[", 「, 【, 《, 〔, ［ ]
+  "punctuator/half_shape/]" : [  "]",」, 】, 》, 〕, ］ ]
+  "punctuator/half_shape/{" : [ "{", 『, 〖, 〈, ｛ ] 
+  "punctuator/half_shape/}" : [ "}", 』, 〗, 〉, ｝ ]

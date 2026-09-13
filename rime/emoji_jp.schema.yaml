@@ -1,0 +1,35 @@
+# Rime schema
+# encoding: utf-8
+#
+# 定義以符號鍵換頁
+#
+
+schema:
+  schema_id: emoji_jp
+  name: 顏文字
+  version: "0.0.2"
+
+engine:
+  processors:
+    - key_binder
+    - speller
+    - selector
+    - navigator
+    - fluency_editor
+  segmentors:
+    - abc_segmentor
+    - fallback_segmentor
+  translators:
+    - script_translator
+
+key_binder:
+  bindings:
+    - {accept: comma, send: comma, when: has_menu}
+    - {accept: period, send: period, when: has_menu}
+    - {accept: minus, send: minus, when: has_menu}
+    - {accept: minus, send: Page_Up, when: paging}
+    - {accept: equal, send: Page_Down, when: has_menu}
+  import_preset: default
+
+translator:
+  dictionary: emoji_jp

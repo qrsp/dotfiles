@@ -1,0 +1,212 @@
+# Rime dictionary
+# encoding: utf-8
+#
+# 顏文字小詞典
+#
+
+---
+name: emoji_jp
+version: "0.0.2"
+# sort: by_weight
+sort: original
+...
+
+(ﾟ∀ﾟ)	happy
+(*´▽`*)	happy
+(ﾉ>ω<)ﾉ	happy
+d(`･∀･)b	happy
+ヽ(✿ﾟ▽ﾟ)ノ 	happy
+(๑¯∀¯๑)	happy
+  ヾ(´︶`*)ﾉ♬	happy
+(≧∇≦)	happy
+⁽⁽ ◟(∗ ˊωˋ ∗)◞ ⁾⁾	happy
+(*´∀｀*)	happy
+
+ヾ(*´∀ ˋ*)ﾉ	yada
+ヽ(●´∀`●)ﾉ	yada
+ヽ(●´ε｀●)ノ	yada
+ヽ( ° ▽°)ノ	yada
+
+ヽ(*´∀｀)八(´∀｀*)ノ	high5
+(*´ω`)人(´ω`*)	high5
+(〃￣ω￣)人(￣︶￣〃) 	high5
+
+(((ﾟДﾟ;)))	surprise
+(;ﾟдﾟ)	surprise
+Σ(*ﾟдﾟﾉ)ﾉ	surprise
+(ﾟдﾟ≡ﾟдﾟ)	surprise
+Σ(・ω・ノ)ノ	surprise
+(|||ﾟдﾟ)	surprise
+Σ(°ω°=ﾉ)ﾉ	surprise
+(； ･`д･´)	surprised
+Σ(´∀｀；)	surprised
+Σ(ﾟДﾟ)	surprised
+
+(´///☁///`)	blush
+( *´◒`*)	blush
+⁄(⁄ ⁄•⁄ω⁄•⁄ ⁄)⁄	blush
+(*ˇωˇ*人)	blush
+(๑´ㅂ`๑)	blush
+(〃∀〃)	blush
+ (๑´ㅁ`)	blush
+(*´ω｀*)	blush
+(๑•́ ω •̀๑)	blush
+
+(๑•́ ₃ •̀๑)	o3o
+( ˘･з･)	o3o
+
+(´,,•ω•,,)♡	love
+(｡•ㅅ•｡)♡	love
+
+_(´ཀ`」 ∠)_ 	blood
+
+
+(´；ω；`)	cry
+( ´•̥̥̥ω•̥̥̥` )	cry
+(´；ω；｀)	cry
+இдஇ	cry
+(´°̥̥̥̥̥̥̥̥ω°̥̥̥̥̥̥̥̥｀)	cry
+｡ﾟヽ(ﾟ´Д`)ﾉﾟ｡	cry
+｡ﾟ(ﾟ´Д｀ﾟ)ﾟ｡	cry
+(；д；)	cry
+ｳﾜｧｧ━━━｡ﾟ(ﾟ´Д｀ﾟ)ﾟ｡━━━ﾝ!!!!	cry
+｡･ﾟ･(ﾉД`)･ﾟ･｡	cry
+ヽ(´Д`；)	cry
+( TДT)	cry
+(´；д；`) 	cry
+
+( • ̀ω•́ )	hem
+ (•‾⌣‾•)	hem
+(๑•̀ω•́)ノ	hem
+(*˘︶˘*)	hem
+٩(๑òωó๑)۶	hem
+
+(´・ω・｀)	worried
+(´・ω・`)	worried
+( ¯•ω•¯ )	worried
+
+(σ`∀´)σ	m9
+(σ′▽‵)′▽‵)σ	m9
+σ ﾟ∀ ﾟ) ﾟ∀ﾟ)σ 	m9
+(ﾟ∀ﾟ )	m9
+
+(つд⊂)	nooooooooooooo
+
+(-ι_- )	stone
+
+(#ﾟДﾟ)	angry
+(`皿´)	angry
+ヽ(#`Д´)ﾉ	angry
+(`へ´≠)	angry
+(╬☉д⊙)	angry
+（｀m´＃）	angry
+ヾ(｡｀Д´｡)	angry
+ヾ(｀ε´)ノ	angry
+
+థ౪థ	awa
+
+ε≡≡ﾍ( ´Д`)ﾉ	run
+─=≡Σ((( つ•̀ω•́)つ	run
+ﾚ(ﾟ∀ﾟ;)ﾍ=З=З=З	run
+=͟͟͞͞( •̀д•́)	run
+ヾ(>Д<;)))).....	run
+ ─=≡Σ(((っﾟДﾟ)っ	run
+ Σ Σ Σ (」○ ω○ )／	run
+
+(๑´ڡ`๑)	yummy
+
+( ﾟДﾟ)σ	hoooo
+
+ｷﾀ━━━━(ﾟ∀ﾟ)━━━━!!	kitaaaaaaaaaaaaa
+
+(✪ω✪)	kirakira
+(☆ω☆)	kirakira
+(=❛ω❛人)✧	kirakira
+
+_(°ω°｣ ∠)	sneak
+_(:3」∠)_	sneak
+
+ ლ( • ̀ω•́ )っ	giveme
+ ლ(•ω •ლ)	giveme
+ლ（╹ε╹ლ）	giveme
+ლ(╯⊙ε⊙ლ╰)	giveme
+ლ(´•д• ̀ლ	giveme
+ლ(ﾟдﾟლ)	giveme
+
+(´-ωก`)	nemui
+
+© ^ – ^	c1
+（ „ • ω⁠•⁠„）	c2
+    / >♥️<\	c3
+
+®（ \ _ /）        ^ – ^ ©	rc1
+    （´⁠„• ω⁠•⁠„)    （  •ω⁠ •⁠„）	rc2
+       /  > O \>♥️</  0 < \	rc3
+
+ฅ●ω●ฅ	cat
+ヽ(=^･ω･^=)丿	cat
+ÒωÓ	cat
+(=θωθ=)	cat
+
+(›´ω`‹ )	hungry
+(*´﹃｀*)	hungry
+
+( *¯ ³¯*)♡	chu
+(╭￣3￣)╭♡ 	chu
+
+(o´・ω・`)σ)Д`)	poke
+( ´∀｀)σ	poke
+σ`∀´)σ	poke
+(╭☞•́⍛•̀)╭☞	poke
+( ´∀`)σ)´Д`*)	poke
+
+( ˘•ω•˘ )	stare
+ತಎತ	stare
+(ÒωÓױ)	stare
+(ಠ益ಠ)	stare
+
+ก็ʕ•͡ᴥ•ʔ ก้	bear
+ㅇㅅㅇ	bear
+
+(o'ω'o)	rabbit
+
+ （つ> _◕）つ︻╦̵̵͇̿̿̿̿╤───	gun
+ (╬▼дﾟ)▄︻┻┳═一	gun
+
+ ᕦ(ò_óˇ)ᕤ	power
+
+(っ・Д・)っ	oao
+
+∂ω∂	owo
+(ㅎωㅎ*)	owo
+
+ˊ_>ˋ	helpless
+┐(´д`)┌	helpless
+  ╮(╯_╰)╭	helpless
+╮(╯∀╰)╭	helpless
+
+( ε:)⌒ﾞ(.ω.)⌒ﾞ(:3 )	roll
+
+(´;ω;`)ヾ(･∀･`)	comfort
+( ´･･)ﾉ(._.`)	comfort
+
+๛ก(ｰ̀ωｰ́ก)	bi--------------
+
+(ง๑ •̀_•́)ง	yoshi
+
+(｀･ω･´)ゞ	yessir
+(｡･ω･)ゞ	yessir
+( ・∀・ )ゞ	yessir
+(｡･Д･)ゞ	yessir
+
+|ω・｀)	jiiiii
+
+(;´Д｀)	sweat
+(¯―¯٥)	sweat
+（；￣д￣）	sweat
+
+
+www	w
+wwww	w4
+wwwww	w5
+wwwwww	w6

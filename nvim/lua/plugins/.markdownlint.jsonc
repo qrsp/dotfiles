@@ -1,0 +1,9 @@
+{
+  "default": true,
+  "ul-style": { "style": "sublist" },
+  "list-marker-space": false,
+  "no-duplicate-header": { "allow_different_nesting": true },
+  "single-trailing-newline": false,
+  "code": false,
+  "ul-indent": { "indent": 4 }
+}
